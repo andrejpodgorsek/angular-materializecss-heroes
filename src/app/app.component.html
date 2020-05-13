@@ -1,5 +1,20 @@
 <div class="container">
     <h1>{{title}}</h1>
-    <app-heroes></app-heroes>
+    <nav>
+        <div class="nav-wrapper">
+        <ul class="left hide-on-med-and-down">
+            <li routerLinkActive="active"><a routerLink="/heroes" >Heroes</a></li>
+            <li routerLinkActive="active"><a routerLink="/dashboard">Dashboard</a></li>
+        </ul>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
     <app-messages></app-messages>
 </div>
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+</script>

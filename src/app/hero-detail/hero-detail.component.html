@@ -1,3 +1,4 @@
+test
 <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
@@ -7,5 +8,7 @@
         </label>
 
     </div>
+
+    <button (click)="goBack()" class="waves-effect waves-light btn">go back</button>
 </div>
 

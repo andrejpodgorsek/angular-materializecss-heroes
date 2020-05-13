@@ -9,8 +9,13 @@ import { MessageService } from './message.service'
 })
 export class HeroService {
 
+  getHero(id: number): Observable<Hero> {
+    this.messageService.add(`poiskal heroja z od = ${id}`);
+    return of(HEROES.find(hero => hero.id === id));
+  }
+
   getHeroes(): Observable<Hero[]> {
-    this.messageService.add('dobil moje heroje!!!')
+    this.messageService.add('dobil moje heroje!!!');
     return of(HEROES);
   }
 

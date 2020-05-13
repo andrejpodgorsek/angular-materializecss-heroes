@@ -1,0 +1,12 @@
+<div *ngIf="messageService.messages.length">
+    <h2>Messages</h2>
+    <button class="waves-effect waves-light btn" (click)="messageService.clear()">clear</button>
+
+    <div class="collection">
+
+        <a class="collection-item" *ngFor='let message of messageService.messages'>{{message}}</a>
+
+    </div>
+
+
+</div>

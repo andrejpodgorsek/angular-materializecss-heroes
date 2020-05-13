@@ -1,4 +1,4 @@
-test
+
 <div *ngIf="hero">
     <h2>{{hero.name | uppercase}} Details</h2>
     <div><span>id: </span>{{hero.id}}</div>
@@ -9,6 +9,13 @@ test
 
     </div>
 
-    <button (click)="goBack()" class="waves-effect waves-light btn">go back</button>
+    <div class="row s12">
+        <div class="col s2">
+            <button (click)="goBack()" class="waves-effect waves-light btn">go back</button>
+        </div>
+        <div class="col s2">
+            <button (click)="save()" class="waves-effect waves-light btn">save it</button>
+        </div>
+    </div>
 </div>
 
